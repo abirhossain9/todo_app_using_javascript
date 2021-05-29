@@ -1,0 +1,153 @@
+/* importing google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;700&display=swap');
+
+/* global reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: linear-gradient(to right, #ee9ca7, #ffdde1); */
+    background: linear-gradient(to right, #7f7fd5, #86a8e7, #91eae4);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    min-height: 100vh;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 65px;
+    color: #425375;
+}
+
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form input,
+form button {
+    font-family: 'Poppins', sans-serif;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    background: white;
+}
+
+form input:focus,
+form button:focus {
+    outline: none;
+}
+
+form button {
+    color: #6984b5;
+    cursor: pointer;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    color: white;
+    background: #6984b5;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    list-style: none;
+    min-width: 20%;
+    margin-top: 50px;
+}
+
+.todo {
+    padding: 10px;
+    background: white;
+    margin-bottom: 5px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.todo-item {
+    margin-right: 8px;
+}
+
+.trash,
+.check {
+    background: rgb(255, 127, 80);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 5px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 1px rgba(130, 130, 140, 0.4);
+}
+
+.check {
+    background: rgb(31, 223, 143);
+}
+
+.trash:focus,
+.check:focus {
+    outline: none;
+}
+
+.trash:hover {
+    background: rgb(255, 253, 250);
+    color: rgb(255, 127, 80);
+}
+.check:hover {
+    background: rgb(255, 253, 250);
+    color: rgb(31, 223, 143);
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.bottom-text {
+    font-size: 13px;
+    text-align: center;
+    margin-top: 3.5rem;
+}
+
+.underline {
+    text-decoration: underline;
+    color: #1880eb;
+}
+
+.underline a:visited {
+    color: #1880eb;
+}
+
+/* css transition effect for completing task */
+.completed {
+    text-decoration: line-through;
+    opacity: 0.9;
+    color: rgba(130, 130, 140, 0.4);
+}
+
+/* css transition effect for deleting task */
+.drop-effect {
+    transform: translateY(45px) rotateZ(20deg);
+    opacity: 0;
+}
